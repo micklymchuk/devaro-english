@@ -39,3 +39,11 @@ route: 'one-shot'
 - Premium design pass upgraded the visual system with a dark editorial hero, stronger typography, elevated cards, refined CTAs, richer pricing emphasis, premium teacher cards, and a high-contrast contact section while keeping the reusable component structure intact.
 - Advanced reference-led pass moved the hero closer to a polished education landing page: rounded green-framed canvas, local 3D teacher mascot asset, floating proof/badge/test cards, social-style header actions, and bilingual hero microcopy.
 - Consistency correction replaced the mismatched dark/corporate lower sections with the same light rounded-panel system as the hero, reduced oversized hero typography/asset overflow, and swapped in a non-checkerboard mascot asset.
+- Animation pass added reusable in-view detection, scroll reveal wrapper, count-up stats, hero entrance/idle animations, staggered card reveals, hover microinteractions, and reduced-motion handling.
+- Motion refinement replaced independent looping badge floats with scroll-linked hero parallax via `useScrollParallax`, while preserving reduced-motion behavior.
+- Icon system update replaced brand-icon experiments with `@iconoir/vue` and uses Iconoir's `Instagram` and `Telegram` components in the header social actions.
+- Theme refactor centralized palette, semantic surfaces, hover colors, and reusable shadows in Tailwind `@theme` tokens within `src/assets/main.css`; components now consume token utilities instead of scattered color literals.
+- Semantic theme correction renamed palette-specific utilities to role-based tokens (`primary`, `secondary`, `highlight`, `tertiary`, `text-main`, `text-muted`, `page`, `surface`) and linked shadow RGB values to the same centralized theme values.
+- Button interaction pass removed visual shadows across the site, replaced the pulse shadow with scale-and-opacity motion, and added reusable background-sweep and click-burst feedback to `BaseButton`.
+- Interaction cleanup removed hover lifting from the contact form card and applied the shared sweep-and-press feedback to Iconoir social buttons.
+- Motion integration added `motion-v` and replaced the rectangular CSS sweep with a reusable `InteractivePaint` primitive: CTA and social buttons now share an asymmetric angled spring sweep, press feedback, and reduced-motion handling.

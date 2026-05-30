@@ -17,7 +17,7 @@ const content = computed(() => siteContent[locale.value])
 </script>
 
 <template>
-  <main class="min-h-screen overflow-hidden bg-forest p-3 text-ink sm:p-5">
+  <main class="min-h-screen overflow-hidden bg-primary p-3 text-text-main sm:p-5">
     <SiteHeader
       :locale="locale"
       :nav-items="content.nav"

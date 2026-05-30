@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import CountUpNumber from '@/components/motion/CountUpNumber.vue'
+import RevealOnScroll from '@/components/motion/RevealOnScroll.vue'
 import type { StatItem } from '@/types/site'
 
 defineProps<{
@@ -7,14 +9,23 @@ defineProps<{
 </script>
 
 <template>
-  <section class="mx-auto mt-5 grid max-w-[1840px] overflow-hidden rounded-[32px] border border-white/80 bg-[#f6f7f4] shadow-[0_24px_90px_rgba(0,0,0,0.12)] md:grid-cols-3" aria-label="School highlights">
-    <div
-      v-for="stat in stats"
-      :key="stat.label"
-      class="border-b border-ink/10 px-[clamp(28px,4vw,62px)] py-10 md:border-b-0 md:border-r last:md:border-r-0"
-    >
-      <strong class="block text-[clamp(2.2rem,4vw,3.9rem)] font-black leading-none text-ink">{{ stat.value }}</strong>
-      <span class="mt-2 block font-extrabold text-muted">{{ stat.label }}</span>
-    </div>
-  </section>
+  <RevealOnScroll
+    as="section"
+    class="mx-auto mt-5 grid max-w-[1840px] overflow-hidden rounded-[32px] border border-white/80 bg-surface md:grid-cols-3"
+    aria-label="School highlights"
+  >
+    <template #default="{ isInView }">
+      <div
+        v-for="(stat, index) in stats"
+        :key="stat.label"
+        class="border-b border-text-main/10 px-[clamp(28px,4vw,62px)] py-10 transition duration-500 ease-out md:border-b-0 md:border-r last:md:border-r-0"
+        :style="{ transitionDelay: `${index * 100}ms` }"
+      >
+        <strong class="block text-[clamp(2.2rem,4vw,3.9rem)] font-black leading-none text-text-main">
+          <CountUpNumber :value="stat.value" :active="isInView" />
+        </strong>
+        <span class="mt-2 block font-extrabold text-muted">{{ stat.label }}</span>
+      </div>
+    </template>
+  </RevealOnScroll>
 </template>

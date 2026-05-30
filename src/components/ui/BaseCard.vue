@@ -17,7 +17,7 @@ withDefaults(
   <component
     :is="as"
     :class="[
-      'rounded-[24px] border border-ink/8 bg-white shadow-[0_18px_55px_rgba(33,48,45,0.08)]',
+      'rounded-[24px] border border-text-main/8 bg-panel',
       padded && 'p-6',
       overflowHidden && 'overflow-hidden p-0',
     ]"
