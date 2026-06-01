@@ -47,3 +47,4 @@ route: 'one-shot'
 - Button interaction pass removed visual shadows across the site, replaced the pulse shadow with scale-and-opacity motion, and added reusable background-sweep and click-burst feedback to `BaseButton`.
 - Interaction cleanup removed hover lifting from the contact form card and applied the shared sweep-and-press feedback to Iconoir social buttons.
 - Motion integration added `motion-v` and replaced the rectangular CSS sweep with a reusable `InteractivePaint` primitive: CTA and social buttons now share an asymmetric angled spring sweep, press feedback, and reduced-motion handling.
+- Decorative motion layer added curated Iconoir learning icons to the hero and programs panel through reusable `LearningIconField` and `DecorativeLearningIcon` components. Desktop uses pointer-linked spring movement, mobile uses reduced scroll parallax, and reduced-motion preferences disable displacement.

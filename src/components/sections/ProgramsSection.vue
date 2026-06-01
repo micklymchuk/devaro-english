@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Globe } from '@iconoir/vue'
+import LearningIconField, { type LearningIconPlacement } from '@/components/motion/LearningIconField.vue'
 import RevealOnScroll from '@/components/motion/RevealOnScroll.vue'
 import BaseCard from '@/components/ui/BaseCard.vue'
 import SectionHeading from '@/components/ui/SectionHeading.vue'
@@ -7,12 +9,18 @@ import type { SiteCopy } from '@/types/site'
 defineProps<{
   content: SiteCopy['programs']
 }>()
+
+const learningIcons: LearningIconPlacement[] = [
+  { icon: Globe, top: '4%', right: '5%', size: 44, depth: 6, scrollDepth: 12, rotate: 8, color: 'primary' },
+]
+
 </script>
 
 <template>
-  <section id="programs" class="mx-auto mt-5 max-w-[1840px] rounded-[32px] border border-white/80 bg-surface px-[clamp(28px,4vw,62px)] py-[clamp(64px,8vw,110px)]">
-    <SectionHeading :eyebrow="content.eyebrow" :title="content.title" />
-    <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+  <section id="programs" class="relative mx-auto mt-5 max-w-[1840px] overflow-hidden rounded-[32px] border border-white/80 bg-surface px-[clamp(28px,4vw,62px)] py-[clamp(64px,8vw,110px)]">
+    <LearningIconField :icons="learningIcons" />
+    <SectionHeading class="relative z-10" :eyebrow="content.eyebrow" :title="content.title" />
+    <div class="relative z-10 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
       <RevealOnScroll
         v-for="(program, index) in content.items"
         :key="program.title"
