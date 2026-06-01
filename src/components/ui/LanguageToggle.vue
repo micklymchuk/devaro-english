@@ -10,16 +10,16 @@ const emit = defineEmits<{
 }>()
 
 const buttonClass = (isActive: boolean) => [
-  'min-h-10 min-w-12 rounded-[15px] border-0 px-3 text-sm font-black transition duration-200',
+  'min-h-11 min-w-12 border-0 px-3 text-sm font-black transition duration-200',
   isActive
-    ? 'bg-primary text-white'
-    : 'bg-transparent text-primary hover:bg-primary/8',
+    ? 'focus-on-color bg-primary text-white'
+    : 'bg-transparent text-primary underline-offset-4 hover:underline',
 ]
 </script>
 
 <template>
-  <div class="flex items-center gap-1 rounded-[20px] border border-primary/12 bg-panel/90 p-1" aria-label="Language switcher">
-    <button type="button" :class="buttonClass(locale === 'uk')" @click="emit('change', 'uk')">UA</button>
-    <button type="button" :class="buttonClass(locale === 'en')" @click="emit('change', 'en')">EN</button>
+  <div class="flex items-center gap-1 border border-primary/20 bg-panel/90 p-1" aria-label="Language switcher">
+    <button type="button" :class="buttonClass(locale === 'uk')" :aria-pressed="locale === 'uk'" aria-label="Українська" @click="emit('change', 'uk')">UA</button>
+    <button type="button" :class="buttonClass(locale === 'en')" :aria-pressed="locale === 'en'" aria-label="English" @click="emit('change', 'en')">EN</button>
   </div>
 </template>

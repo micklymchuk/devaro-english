@@ -15,14 +15,14 @@ const emit = defineEmits<{
 
 <template>
   <header
-    class="sticky top-3 z-20 mx-auto grid max-w-[1840px] grid-cols-[1fr_auto] items-center gap-6 rounded-t-[28px] border-x border-t border-white/80 bg-surface/95 px-[clamp(22px,4vw,62px)] py-6 backdrop-blur-xl lg:grid-cols-[auto_1fr_auto]"
+    class="sticky top-3 z-30 mx-auto grid max-w-[1840px] grid-cols-[1fr_auto] items-center gap-6 bg-panel/95 px-[clamp(22px,4vw,62px)] py-5 shadow-[0_5px_0_#ee72df] backdrop-blur-xl lg:grid-cols-[auto_1fr_auto]"
   >
     <a class="flex items-center gap-2.5 font-extrabold" href="#top" aria-label="Devaro English home">
       <span class="text-[clamp(1.5rem,3vw,2.7rem)] font-black tracking-tight text-text-main">Devaro <span class="text-primary">English</span></span>
     </a>
 
     <nav class="hidden justify-center gap-[clamp(14px,3vw,34px)] text-sm font-extrabold text-muted lg:flex" aria-label="Main navigation">
-      <a v-for="item in navItems" :key="item.href" :href="item.href" class="transition hover:text-text-main">{{ item.label }}</a>
+      <a v-for="item in navItems" :key="item.href" :href="item.href" class="underline-offset-6 decoration-primary decoration-2 transition hover:underline">{{ item.label }}</a>
     </nav>
 
     <div class="flex items-center gap-3">

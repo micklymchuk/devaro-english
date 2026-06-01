@@ -22,10 +22,10 @@ const emit = defineEmits<{
       :value="modelValue"
       type="text"
       :class="[
-        'min-h-13 w-full rounded-lg px-4 text-text-main outline-none transition focus:ring-2',
+        'min-h-13 w-full border px-4 text-text-main transition',
         tone === 'dark'
-          ? 'border border-white/12 bg-panel/90 focus:border-highlight focus:ring-highlight/25'
-          : 'border border-text-main/15 bg-surface-soft focus:border-primary focus:ring-primary/20',
+          ? 'border-white/40 bg-panel/90'
+          : 'border-text-muted bg-surface-soft',
       ]"
       @input="emit('update:modelValue', ($event.target as HTMLInputElement).value)"
     />

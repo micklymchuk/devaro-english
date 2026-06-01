@@ -13,7 +13,7 @@ defineProps<{
       compact ? 'items-start' : 'items-end',
     ]"
   >
-    <p class="mb-0 w-fit rotate-[-2deg] rounded-lg bg-secondary px-4 py-2 text-sm font-black text-white">{{ eyebrow }}</p>
-    <h2 class="mb-0 max-w-[980px] text-[clamp(2.2rem,4.8vw,4.4rem)] font-black leading-[0.98] tracking-tight">{{ title }}</h2>
+    <p class="collage-badge mb-0 rotate-[-2deg]">{{ eyebrow }}</p>
+    <h2 class="collage-heading mb-0 max-w-[980px]">{{ title }}</h2>
   </div>
 </template>

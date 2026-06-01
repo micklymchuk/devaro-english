@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watchEffect } from 'vue'
 import SiteHeader from '@/components/layout/SiteHeader.vue'
 import ContactSection from '@/components/sections/ContactSection.vue'
 import HeroSection from '@/components/sections/HeroSection.vue'
@@ -14,14 +14,22 @@ import type { Locale } from '@/types/site'
 
 const locale = ref<Locale>('uk')
 const content = computed(() => siteContent[locale.value])
+
+watchEffect(() => {
+  if (typeof document !== 'undefined') document.documentElement.lang = locale.value
+})
+
+const changeLocale = (nextLocale: Locale) => {
+  if (Object.hasOwn(siteContent, nextLocale)) locale.value = nextLocale
+}
 </script>
 
 <template>
-  <main class="min-h-screen overflow-hidden bg-primary p-3 text-text-main sm:p-5">
+  <main class="min-h-screen overflow-hidden bg-page p-3 text-text-main sm:p-5">
     <SiteHeader
       :locale="locale"
       :nav-items="content.nav"
-      @change-locale="locale = $event"
+      @change-locale="changeLocale"
     />
     <HeroSection :content="content.hero" :image="heroImage" />
     <StatsBand :stats="content.stats" />

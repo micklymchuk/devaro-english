@@ -37,3 +37,6 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+
+# Generated UX image-generation intermediates
+_bmad-output/planning-artifacts/ux-designs/*/.working/stickers/

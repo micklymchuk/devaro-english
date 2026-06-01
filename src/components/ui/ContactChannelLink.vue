@@ -7,7 +7,7 @@ defineProps<{
 <template>
   <a
     href="#contact"
-    class="rounded-xl border border-text-main/10 bg-panel px-4 py-2.5 text-sm font-black text-text-main transition hover:border-primary/35"
+    class="printed-shadow inline-flex min-h-11 items-center border-2 border-text-main bg-panel px-4 py-2.5 text-sm font-black text-text-main transition hover:text-primary"
   >
     {{ label }}
   </a>

@@ -17,7 +17,7 @@ withDefaults(
   <component
     :is="as"
     :class="[
-      'rounded-[24px] border border-text-main/8 bg-panel',
+      'paper-card',
       padded && 'p-6',
       overflowHidden && 'overflow-hidden p-0',
     ]"

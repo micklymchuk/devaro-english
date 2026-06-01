@@ -1,22 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Oswald:wght@600;700&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-text-main: #21302d;
-  --color-text-muted: #52615e;
-  --color-page: #f7f3ea;
-  --color-surface: #f6f7f4;
-  --color-surface-soft: #fbfaf7;
-  --color-panel: #ffffff;
-  --color-primary: #116149;
-  --color-primary-hover: #178157;
+  --color-text-main: #172e28;
+  --color-text-muted: #59645f;
+  --color-page: #f7f4ed;
+  --color-surface: #f7f4ed;
+  --color-surface-soft: #fffefb;
+  --color-panel: #fffefb;
+  --color-primary: #23724f;
+  --color-primary-hover: #2b805b;
   --color-tertiary: #a14f34;
-  --color-highlight: #f0c266;
-  --color-surface-muted: #eef2ed;
-  --color-secondary: #e85385;
-  --color-primary-rgb: 17, 97, 73;
-  --color-secondary-rgb: 232, 83, 133;
-  --color-highlight-rgb: 240, 194, 102;
-  --color-text-main-rgb: 33, 48, 45;
+  --color-highlight: #ee72df;
+  --color-surface-muted: #f1eee7;
+  --color-secondary: #ee72df;
+  --color-primary-rgb: 35, 114, 79;
+  --color-secondary-rgb: 238, 114, 223;
+  --color-highlight-rgb: 238, 114, 223;
+  --color-text-main-rgb: 23, 46, 40;
 }
 
 @layer base {
@@ -41,6 +42,64 @@
   button,
   input {
     font: inherit;
+  }
+
+  h1,
+  h2 {
+    font-family: Oswald, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+  }
+
+  :focus-visible {
+    outline: 3px solid #172e28;
+    outline-offset: 3px;
+  }
+
+  .focus-on-color:focus-visible {
+    outline-color: #ffffff;
+    box-shadow: 0 0 0 5px #172e28 !important;
+  }
+}
+
+@layer components {
+  .collage-section {
+    @apply relative mx-auto mt-5 max-w-[1840px] bg-panel px-[clamp(28px,4vw,62px)] py-[clamp(64px,8vw,110px)];
+  }
+
+  .paper-card {
+    background: #f7f4ed;
+    box-shadow: 6px 6px 0 #ee72df;
+  }
+
+  .paper-card-featured {
+    box-shadow: 8px 8px 0 #ee72df;
+  }
+
+  .printed-shadow {
+    box-shadow: 4px 4px 0 rgba(23, 46, 40, 0.28);
+  }
+
+  .grid-fragment {
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(16, 28, 25, 0.7) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(16, 28, 25, 0.7) 1px, transparent 1px);
+    background-size: 13px 13px;
+  }
+
+  .torn-paper-bottom {
+    clip-path: polygon(0 38%, 5% 62%, 12% 31%, 20% 66%, 29% 37%, 36% 70%, 45% 32%, 53% 68%, 61% 35%, 69% 71%, 77% 39%, 84% 67%, 91% 34%, 96% 61%, 100% 40%, 100% 100%, 0 100%);
+  }
+
+  .collage-badge {
+    @apply w-fit px-2 py-1 text-sm font-black text-text-main;
+    background: #ee72df;
+  }
+
+  .collage-heading {
+    @apply text-[clamp(2.2rem,4.8vw,4.4rem)] leading-[0.94];
   }
 }
 
@@ -101,6 +160,23 @@
       animation-duration: 0.001ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.001ms !important;
+    }
+
+    .motion-translate {
+      translate: revert !important;
+      transform: none !important;
+    }
+
+    .reveal-content {
+      opacity: 1 !important;
+      translate: revert !important;
+      transform: none !important;
+    }
+
+    .motion-still {
+      scale: revert !important;
+      translate: revert !important;
+      transform: none !important;
     }
   }
 }

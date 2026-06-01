@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UX Design Validation: Devaro English</title>
+  <style>
+    :root { --bg:#fafaf9; --surface:#fff; --border:#e7e5e4; --text:#1c1917; --muted:#78716c; --strong:#16a34a; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:15px/1.6 Inter,system-ui,sans-serif; }
+    main { max-width:960px; margin:auto; padding:32px 24px 64px; }
+    h1 { margin:0; font-size:24px; }
+    h2 { margin:0; font-size:16px; }
+    .path, footer { color:var(--muted); font:12px/1.5 ui-monospace,monospace; }
+    .synthesis, details, .checks { margin-top:18px; border:1px solid var(--border); background:var(--surface); padding:16px 20px; }
+    .summary { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:10px; margin-top:18px; }
+    .card { border:1px solid var(--border); background:var(--surface); padding:12px 14px; }
+    .name { color:var(--muted); font-size:13px; }
+    .verdict { color:var(--strong); font-weight:700; }
+    summary { cursor:pointer; font-weight:700; }
+    li { margin:4px 0; }
+    footer { margin-top:30px; border-top:1px solid var(--border); padding-top:14px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Devaro English - UX Design Validation Report</h1>
+  <div class="path">DESIGN.md + EXPERIENCE.md</div>
+  <section class="synthesis">
+    <p>The revised spine pair is a strong downstream UX contract. Visual identity, preserved behavior, component vocabulary, states, responsive behavior, accessibility rules, and promoted references are extraction-clean and implementation-ready.</p>
+    <p>The accessibility lens found no unresolved contract defects. Residual checks belong to implementation verification.</p>
+  </section>
+  <section class="summary">
+    <div class="card"><div class="name">Flow coverage</div><div class="verdict">strong</div></div>
+    <div class="card"><div class="name">Token completeness</div><div class="verdict">strong</div></div>
+    <div class="card"><div class="name">Component coverage</div><div class="verdict">strong</div></div>
+    <div class="card"><div class="name">State coverage</div><div class="verdict">strong</div></div>
+    <div class="card"><div class="name">Visual references</div><div class="verdict">strong</div></div>
+    <div class="card"><div class="name">Bloat & overspecification</div><div class="verdict">strong</div></div>
+    <div class="card"><div class="name">Inheritance discipline</div><div class="verdict">strong</div></div>
+    <div class="card"><div class="name">Shape fit</div><div class="verdict">strong</div></div>
+  </section>
+  <details open><summary>Rubric walker - 0 unresolved findings</summary><p>All eight categories are strong. Token references resolve, promoted visual references are linked, and no stale working-path references remain.</p></details>
+  <details open><summary>Accessibility - 0 unresolved findings</summary><p>The contract defines focus, contrast restrictions, locale semantics, decorative semantics, reduced motion, target sizes, Cyrillic-capable fonts, and responsive collision rules.</p></details>
+  <section class="checks">
+    <h2>Implementation verification checks</h2>
+    <ul>
+      <li>Keyboard traversal, focus visibility, and forced-colors behavior.</li>
+      <li>Locale accessible names, selected state, and document language updates.</li>
+      <li>Decorative-layer semantics and pointer behavior.</li>
+      <li>Reduced motion, 320px reflow, 200% zoom, and touch-target sizing.</li>
+      <li>Ukrainian glyph rendering in Oswald and Inter.</li>
+    </ul>
+  </section>
+  <footer>review-rubric.md · review-accessibility.md · generated 2026-06-01</footer>
+</main>
+</body>
+</html>

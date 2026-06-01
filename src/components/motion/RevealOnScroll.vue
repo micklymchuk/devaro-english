@@ -33,7 +33,7 @@ const offsetClass = computed(() => {
     ref="target"
     :style="{ transitionDelay: `${delay}ms` }"
     :class="[
-      'motion-safe:transition-all motion-safe:duration-700 motion-safe:ease-out',
+      'reveal-content motion-safe:transition-all motion-safe:duration-700 motion-safe:ease-out',
       isInView ? 'opacity-100 translate-x-0 translate-y-0' : `opacity-0 ${offsetClass}`,
     ]"
   >
