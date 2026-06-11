@@ -11,12 +11,12 @@
   --color-primary: #23724f;
   --color-primary-hover: #2b805b;
   --color-tertiary: #a14f34;
-  --color-highlight: #ee72df;
+  --color-highlight: #d65e84;
   --color-surface-muted: #f1eee7;
-  --color-secondary: #ee72df;
+  --color-secondary: #d65e84;
   --color-primary-rgb: 35, 114, 79;
-  --color-secondary-rgb: 238, 114, 223;
-  --color-highlight-rgb: 238, 114, 223;
+  --color-secondary-rgb: 214, 94, 132;
+  --color-highlight-rgb: 214, 94, 132;
   --color-text-main-rgb: 23, 46, 40;
 }
 
@@ -65,16 +65,16 @@
 
 @layer components {
   .collage-section {
-    @apply relative mx-auto mt-5 max-w-[1840px] bg-panel px-[clamp(28px,4vw,62px)] py-[clamp(64px,8vw,110px)];
+    @apply relative mx-auto mt-5 max-w-[1840px] bg-panel px-[clamp(24px,4vw,62px)] py-[clamp(38px,8vw,72px)] lg:py-[clamp(64px,8vw,110px)];
   }
 
   .paper-card {
     background: #f7f4ed;
-    box-shadow: 6px 6px 0 #ee72df;
+    box-shadow: 6px 6px 0 #d65e84;
   }
 
   .paper-card-featured {
-    box-shadow: 8px 8px 0 #ee72df;
+    box-shadow: 8px 8px 0 #d65e84;
   }
 
   .printed-shadow {
@@ -86,20 +86,46 @@
     background-image:
       linear-gradient(rgba(16, 28, 25, 0.7) 1px, transparent 1px),
       linear-gradient(90deg, rgba(16, 28, 25, 0.7) 1px, transparent 1px);
-    background-size: 13px 13px;
+    background-size: 27px 27px;
+    clip-path: polygon(6% 6%, 100% 0, 94% 93%, 63% 87%, 52% 100%, 17% 89%, 0 57%);
   }
 
-  .torn-paper-bottom {
-    clip-path: polygon(0 38%, 5% 62%, 12% 31%, 20% 66%, 29% 37%, 36% 70%, 45% 32%, 53% 68%, 61% 35%, 69% 71%, 77% 39%, 84% 67%, 91% 34%, 96% 61%, 100% 40%, 100% 100%, 0 100%);
+  .dot-field {
+    pointer-events: none;
+    background-image: radial-gradient(rgba(23, 46, 40, 0.18) 0.75px, transparent 0.75px);
+    background-size: 6px 6px;
+  }
+
+  .hero-paper-sheet {
+    clip-path: polygon(5% 0, 100% 6%, 96% 97%, 11% 100%, 0 72%, 4% 51%, 0 20%);
+    filter: drop-shadow(0 16px 9px rgba(23, 46, 40, 0.1));
+  }
+
+  .torn-paper-top {
+    clip-path: polygon(0 100%, 0 50%, 4% 15%, 10% 60%, 17% 20%, 23% 72%, 31% 16%, 39% 63%, 48% 9%, 58% 67%, 66% 17%, 75% 59%, 85% 7%, 93% 64%, 100% 22%, 100% 100%);
   }
 
   .collage-badge {
     @apply w-fit px-2 py-1 text-sm font-black text-text-main;
-    background: #ee72df;
+    background: #d65e84;
   }
 
   .collage-heading {
-    @apply text-[clamp(2.2rem,4.8vw,4.4rem)] leading-[0.94];
+    font-size: clamp(2.45rem, 10.5vw, 3.7rem);
+    line-height: 0.96;
+  }
+
+  @media (min-width: 1024px) {
+    .collage-heading {
+      font-size: clamp(4.1rem, 5vw, 5.65rem);
+      line-height: 0.94;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .collage-heading {
+      font-size: clamp(4.35rem, 4.7vw, 6rem);
+    }
   }
 }
 

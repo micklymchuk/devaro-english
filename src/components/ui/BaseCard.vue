@@ -18,7 +18,7 @@ withDefaults(
     :is="as"
     :class="[
       'paper-card',
-      padded && 'p-6',
+      padded && 'p-5 sm:p-6',
       overflowHidden && 'overflow-hidden p-0',
     ]"
   >

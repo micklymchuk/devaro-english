@@ -20,8 +20,8 @@ const prefersReducedMotion = useReducedMotion()
 
 const surfaceVariants = computed(() => ({
   idle: { scale: 1 },
-  hover: prefersReducedMotion.value ? { scale: 1 } : { scale: 1.015 },
-  press: prefersReducedMotion.value ? { scale: 1 } : { scale: 0.98 },
+  hover: { scale: 1 },
+  press: prefersReducedMotion.value ? { scale: 1 } : { scale: 0.99 },
 }))
 
 const paintVariants = {

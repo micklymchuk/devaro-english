@@ -15,10 +15,10 @@ const emit = defineEmits<{
 
 <template>
   <header
-    class="sticky top-3 z-30 mx-auto grid max-w-[1840px] grid-cols-[1fr_auto] items-center gap-6 bg-panel/95 px-[clamp(22px,4vw,62px)] py-5 shadow-[0_5px_0_#ee72df] backdrop-blur-xl lg:grid-cols-[auto_1fr_auto]"
+    class="sticky top-2 z-30 mx-auto grid max-w-[1840px] grid-cols-[1fr_auto] items-center gap-3 bg-panel/95 px-[clamp(14px,4vw,62px)] py-3 shadow-[0_4px_0_#d65e84] backdrop-blur-xl sm:top-3 sm:gap-6 sm:py-5 sm:shadow-[0_5px_0_#d65e84] lg:grid-cols-[auto_1fr_auto]"
   >
     <a class="flex items-center gap-2.5 font-extrabold" href="#top" aria-label="Devaro English home">
-      <span class="text-[clamp(1.5rem,3vw,2.7rem)] font-black tracking-tight text-text-main">Devaro <span class="text-primary">English</span></span>
+      <span class="text-[clamp(1.3rem,7vw,2rem)] font-black tracking-tight text-text-main sm:text-[clamp(1.5rem,3vw,2.7rem)]">Devaro <span class="text-primary">English</span></span>
     </a>
 
     <nav class="hidden justify-center gap-[clamp(14px,3vw,34px)] text-sm font-extrabold text-muted lg:flex" aria-label="Main navigation">

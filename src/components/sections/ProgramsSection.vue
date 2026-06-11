@@ -17,7 +17,7 @@ const stickers: StickerPlacement[] = [
 
 <template>
   <section id="programs" class="collage-section overflow-hidden">
-    <div class="grid-fragment absolute right-[1%] top-[5%] hidden h-28 w-36 opacity-30 md:block" aria-hidden="true"></div>
+    <div class="grid-fragment absolute right-[-3%] top-[3%] hidden h-36 w-52 rotate-[-7deg] bg-text-main opacity-25 md:block" aria-hidden="true"></div>
     <DecorativeStickerField :stickers="stickers" />
     <SectionHeading class="relative z-10" :eyebrow="content.eyebrow" :title="content.title" />
     <div class="relative z-10 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
@@ -27,12 +27,12 @@ const stickers: StickerPlacement[] = [
         :delay="index * 90"
         as="div"
       >
-      <BaseCard class="motion-translate min-h-72 transition duration-200 hover:-translate-y-1">
-        <span class="mb-8 grid size-12 place-items-center bg-primary text-xs font-black text-white">
+      <BaseCard class="motion-translate min-h-[210px] transition duration-200 hover:-translate-y-1 md:min-h-72">
+        <span class="mb-5 grid size-11 place-items-center bg-primary text-xs font-black text-white md:mb-8 md:size-12">
           {{ program.title.slice(0, 2) }}
         </span>
-        <h3 class="mb-3 text-2xl font-black">{{ program.title }}</h3>
-        <p class="leading-relaxed text-muted">{{ program.text }}</p>
+        <h3 class="mb-3 text-xl font-black md:text-2xl">{{ program.title }}</h3>
+        <p class="text-[0.98rem] leading-relaxed text-muted md:text-base">{{ program.text }}</p>
       </BaseCard>
       </RevealOnScroll>
     </div>

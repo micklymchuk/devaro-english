@@ -18,7 +18,7 @@ defineProps<{
         v-for="step in content.steps"
         :key="step"
         as="li"
-        class="grid min-h-20 grid-cols-[58px_1fr] items-center gap-4 border-b border-text-main/10 px-5 text-xl font-black last:border-b-0 before:grid before:size-11 before:place-items-center before:bg-primary before:text-sm before:text-white before:content-[counter(steps)] [counter-increment:steps]"
+        class="grid min-h-16 grid-cols-[42px_1fr] items-center gap-4 border-b border-text-main/10 px-4 py-4 text-[clamp(1.15rem,2.2vw,1.65rem)] font-black leading-tight last:border-b-0 sm:grid-cols-[48px_1fr] sm:gap-5 sm:px-5 sm:py-5 before:grid before:size-10 before:place-items-center before:bg-primary before:text-sm before:text-white before:content-[counter(steps)] sm:before:size-11 [counter-increment:steps]"
       >
         {{ step }}
       </RevealOnScroll>

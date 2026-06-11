@@ -1,7 +1,7 @@
 import type { Locale, SiteCopy } from '@/types/site'
 
 const images = {
-  hero: '/devaro-teacher-mascot.png',
+  hero: '/hero-teacher-sticker.png',
   olena:
     'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=560&q=80',
   marta:
@@ -27,7 +27,7 @@ export const siteContent = {
       primaryCta: 'Записатися на пробне заняття',
       secondaryCta: 'Звʼязатися з менеджером',
       trustItems: ['Індивідуальні Zoom-уроки', 'Підбір викладача', 'Підтримка українською та англійською'],
-      imageAlt: 'Привітна 3D-викладачка Devaro English',
+      imageAlt: 'Стікер привітної викладачки Devaro English',
       lessonLabel: 'Онлайн',
       lessonValue: '1:1',
       lessonNote: 'гнучкий графік',
@@ -123,7 +123,7 @@ export const siteContent = {
       primaryCta: 'Book a trial lesson',
       secondaryCta: 'Contact manager',
       trustItems: ['Individual Zoom lessons', 'Teacher matching', 'Ukrainian and English support'],
-      imageAlt: 'Friendly 3D Devaro English teacher',
+      imageAlt: 'Friendly Devaro English teacher sticker',
       lessonLabel: 'Online',
       lessonValue: '1:1',
       lessonNote: 'flexible schedule',

@@ -14,7 +14,7 @@ withDefaults(
 )
 
 const baseClass =
-  'printed-shadow motion-translate inline-flex min-h-13 items-center justify-center border-2 px-6 text-sm font-black transition duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-1 active:translate-y-1 active:shadow-none'
+  'printed-shadow inline-flex min-h-13 items-center justify-center border-2 px-6 text-sm font-black transition duration-150 active:shadow-none'
 
 const variants = {
   primary: 'focus-on-color border-primary bg-primary text-white',

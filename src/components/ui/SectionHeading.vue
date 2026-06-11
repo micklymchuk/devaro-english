@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <div
     :class="[
-      'mb-11 grid gap-8 lg:grid-cols-[0.62fr_1.38fr]',
+      'mb-7 grid gap-4 sm:mb-9 sm:gap-6 lg:mb-11 lg:grid-cols-[0.62fr_1.38fr] lg:gap-8',
       compact ? 'items-start' : 'items-end',
     ]"
   >
