@@ -15,6 +15,11 @@ export interface ProgramItem {
   text: string
 }
 
+export interface LessonFlowStep {
+  label: string
+  text: string
+}
+
 export interface TeacherProfile {
   name: string
   role: string
@@ -60,7 +65,10 @@ export interface SiteCopy {
   lessonFlow: {
     eyebrow: string
     title: string
-    steps: string[]
+    steps: LessonFlowStep[]
+    ctaText: string
+    ctaLabel: string
+    ctaHref: string
   }
   teachers: {
     eyebrow: string

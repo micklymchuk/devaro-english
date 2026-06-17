@@ -58,8 +58,28 @@ export const siteContent = {
     },
     lessonFlow: {
       eyebrow: 'Як проходять заняття',
-      title: 'Менеджер уточнює мету, рівень, графік та бажаний стиль викладача перед тим, як запропонувати наступний крок.',
-      steps: ['Швидка консультація', 'Підбір викладача', 'Персональний план', 'Zoom-уроки'],
+      title: 'Менеджер підбирає викладача та темп під вашу ціль.',
+      steps: [
+        {
+          label: 'Швидка консультація',
+          text: 'Уточнюємо мету, рівень, графік і комфортний формат занять.',
+        },
+        {
+          label: 'Підбір викладача',
+          text: 'Рекомендуємо викладача за стилем спілкування, досвідом і задачами учня.',
+        },
+        {
+          label: 'Персональний план',
+          text: 'Фіксуємо темп, фокус уроків і перші орієнтири прогресу.',
+        },
+        {
+          label: 'Zoom-уроки',
+          text: 'Починаєте індивідуальні заняття з регулярним зворотним звʼязком.',
+        },
+      ],
+      ctaText: 'Готові підібрати викладача без здогадок?',
+      ctaLabel: 'Звʼязатися з менеджером',
+      ctaHref: '#contact',
     },
     teachers: {
       eyebrow: 'Викладачі',
@@ -154,8 +174,28 @@ export const siteContent = {
     },
     lessonFlow: {
       eyebrow: 'How lessons work',
-      title: 'A manager learns the goal, level, schedule, and preferred teacher style before recommending the next step.',
-      steps: ['Quick consultation', 'Teacher match', 'Personal plan', 'Zoom lessons'],
+      title: 'The manager matches the teacher and pace to your goal.',
+      steps: [
+        {
+          label: 'Quick consultation',
+          text: 'We clarify the goal, current level, schedule, and lesson format that feels comfortable.',
+        },
+        {
+          label: 'Teacher match',
+          text: 'We recommend a teacher by communication style, experience, and the learnerʼs tasks.',
+        },
+        {
+          label: 'Personal plan',
+          text: 'We set the rhythm, lesson focus, and first progress markers.',
+        },
+        {
+          label: 'Zoom lessons',
+          text: 'You start individual lessons with regular feedback and adjustment.',
+        },
+      ],
+      ctaText: 'Ready to choose a teacher without guessing?',
+      ctaLabel: 'Contact manager',
+      ctaHref: '#contact',
     },
     teachers: {
       eyebrow: 'Meet the teachers',
