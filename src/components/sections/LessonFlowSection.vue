@@ -13,7 +13,7 @@ defineProps<{
     <div class="site-container grid gap-8 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] lg:items-start lg:gap-12 xl:gap-16">
       <div class="max-w-[680px] lg:max-w-[560px]">
         <p class="collage-badge mb-5 rotate-[-2deg]">{{ content.eyebrow }}</p>
-        <h2 class="mb-0 text-[clamp(2.1rem,7vw,2.85rem)] leading-[0.98] sm:text-[clamp(2.45rem,5.8vw,3.15rem)] lg:text-[clamp(3.05rem,3.65vw,4.25rem)]">
+        <h2 class="collage-heading mb-0">
           {{ content.title }}
         </h2>
       </div>

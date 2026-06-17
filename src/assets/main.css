@@ -170,20 +170,19 @@
   }
 
   .collage-heading {
-    font-size: clamp(2.45rem, 10.5vw, 3.7rem);
-    line-height: 0.96;
+    font-size: clamp(2.1rem, 7vw, 2.85rem);
+    line-height: 0.98;
+  }
+
+  @media (min-width: 640px) {
+    .collage-heading {
+      font-size: clamp(2.45rem, 5.8vw, 3.15rem);
+    }
   }
 
   @media (min-width: 1024px) {
     .collage-heading {
-      font-size: clamp(4.1rem, 5vw, 5.65rem);
-      line-height: 0.94;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    .collage-heading {
-      font-size: clamp(4.35rem, 4.7vw, 6rem);
+      font-size: clamp(3.05rem, 3.65vw, 4.25rem);
     }
   }
 }
