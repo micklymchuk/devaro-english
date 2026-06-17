@@ -21,6 +21,42 @@
 }
 
 @layer base {
+  :root {
+    --site-container-max: 1280px;
+    --site-margin: 20px;
+    --site-grid-gutter: 16px;
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    --space-9: 80px;
+    --space-10: 104px;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --site-margin: 32px;
+      --site-grid-gutter: 20px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --site-margin: 48px;
+      --site-grid-gutter: 24px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    :root {
+      --site-margin: 80px;
+    }
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -48,7 +84,7 @@
   h2 {
     font-family: Oswald, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     font-weight: 700;
-    letter-spacing: -0.025em;
+    letter-spacing: 0;
     text-transform: uppercase;
   }
 
@@ -64,6 +100,29 @@
 }
 
 @layer components {
+  .site-container {
+    width: min(var(--site-container-max), calc(100vw - (var(--site-margin) * 2)));
+    margin-inline: auto;
+  }
+
+  .site-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: var(--site-grid-gutter);
+  }
+
+  @media (min-width: 768px) {
+    .site-grid {
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .site-grid {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
+
   .collage-section {
     @apply relative mx-auto mt-5 max-w-[1840px] bg-panel px-[clamp(24px,4vw,62px)] py-[clamp(38px,8vw,72px)] lg:py-[clamp(64px,8vw,110px)];
   }

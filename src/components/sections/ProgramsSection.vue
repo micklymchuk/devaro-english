@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import DecorativeStickerField, { type StickerPlacement } from '@/components/motion/DecorativeStickerField.vue'
 import RevealOnScroll from '@/components/motion/RevealOnScroll.vue'
-import BaseCard from '@/components/ui/BaseCard.vue'
 import SectionHeading from '@/components/ui/SectionHeading.vue'
 import type { SiteCopy } from '@/types/site'
 
@@ -16,25 +15,36 @@ const stickers: StickerPlacement[] = [
 </script>
 
 <template>
-  <section id="programs" class="collage-section overflow-hidden">
-    <div class="grid-fragment absolute right-[-3%] top-[3%] hidden h-36 w-52 rotate-[-7deg] bg-text-main opacity-25 md:block" aria-hidden="true"></div>
+  <section
+    id="programs"
+    class="relative mx-auto mt-5 max-w-[1840px] overflow-hidden bg-panel py-[clamp(48px,8vw,72px)] lg:py-[clamp(72px,8vw,110px)]"
+  >
     <DecorativeStickerField :stickers="stickers" />
-    <SectionHeading class="relative z-10" :eyebrow="content.eyebrow" :title="content.title" />
-    <div class="relative z-10 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
-      <RevealOnScroll
-        v-for="(program, index) in content.items"
-        :key="program.title"
-        :delay="index * 90"
-        as="div"
-      >
-      <BaseCard class="motion-translate min-h-[210px] transition duration-200 hover:-translate-y-1 md:min-h-72">
-        <span class="mb-5 grid size-11 place-items-center bg-primary text-xs font-black text-white md:mb-8 md:size-12">
-          {{ program.title.slice(0, 2) }}
-        </span>
-        <h3 class="mb-3 text-xl font-black md:text-2xl">{{ program.title }}</h3>
-        <p class="text-[0.98rem] leading-relaxed text-muted md:text-base">{{ program.text }}</p>
-      </BaseCard>
-      </RevealOnScroll>
+    <div class="site-container relative z-10">
+      <SectionHeading :eyebrow="content.eyebrow" :title="content.title" />
+      <div class="grid gap-5 md:grid-cols-2 lg:gap-6 xl:grid-cols-6">
+        <RevealOnScroll
+          v-for="(program, index) in content.items"
+          :key="program.title"
+          :delay="index * 90"
+          as="article"
+          tabindex="0"
+          :class="[
+            'motion-translate group flex min-h-[246px] flex-col bg-surface p-6 text-left ring-1 ring-text-main/10 transition duration-300 ease-out hover:-translate-y-1 hover:bg-surface-soft hover:shadow-[6px_6px_0_rgba(214,94,132,0.68)] focus-visible:-translate-y-1 focus-visible:bg-surface-soft focus-visible:shadow-[6px_6px_0_rgba(214,94,132,0.68)] sm:p-7 md:min-h-[292px] lg:p-8 xl:min-h-[310px]',
+            index < 3 ? 'xl:col-span-2' : 'xl:col-span-3',
+          ]"
+        >
+          <span class="mb-6 grid size-12 place-items-center bg-primary text-sm font-black text-white transition duration-300 group-hover:bg-primary-hover group-focus-visible:bg-primary-hover md:mb-7">
+            {{ program.title.slice(0, 2) }}
+          </span>
+          <h3 class="text-[1.25rem] font-black leading-[1.18] text-text-main md:text-[1.42rem]">
+            {{ program.title }}
+          </h3>
+          <p class="mt-4 text-[1rem] leading-relaxed text-muted md:text-[1.04rem]">
+            {{ program.text }}
+          </p>
+        </RevealOnScroll>
+      </div>
     </div>
   </section>
 </template>

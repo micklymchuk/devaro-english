@@ -10,7 +10,7 @@ const emit = defineEmits<{
 }>()
 
 const buttonClass = (isActive: boolean) => [
-  'min-h-11 min-w-12 border-0 px-3 text-sm font-black transition duration-200',
+  'min-h-11 min-w-12 border-0 px-3 text-sm font-black leading-none transition duration-200',
   isActive
     ? 'focus-on-color bg-primary text-white'
     : 'bg-transparent text-primary underline-offset-4 hover:underline',

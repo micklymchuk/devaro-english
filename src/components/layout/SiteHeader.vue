@@ -15,21 +15,23 @@ const emit = defineEmits<{
 
 <template>
   <header
-    class="sticky top-2 z-30 mx-auto grid max-w-[1840px] grid-cols-[1fr_auto] items-center gap-3 bg-panel/95 px-[clamp(14px,4vw,62px)] py-3 shadow-[0_4px_0_#d65e84] backdrop-blur-xl sm:top-3 sm:gap-6 sm:py-5 sm:shadow-[0_5px_0_#d65e84] lg:grid-cols-[auto_1fr_auto]"
+    class="sticky top-2 z-30 mx-auto max-w-[1840px] bg-panel/95 py-3 shadow-[0_4px_0_#d65e84] backdrop-blur-xl sm:top-3 sm:py-4 sm:shadow-[0_5px_0_#d65e84]"
   >
-    <a class="flex items-center gap-2.5 font-extrabold" href="#top" aria-label="Devaro English home">
-      <span class="text-[clamp(1.3rem,7vw,2rem)] font-black tracking-tight text-text-main sm:text-[clamp(1.5rem,3vw,2.7rem)]">Devaro <span class="text-primary">English</span></span>
-    </a>
+    <div class="site-container grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 lg:grid-cols-[auto_1fr_auto] lg:gap-8">
+      <a class="flex min-h-11 items-center gap-2.5 font-extrabold" href="#top" aria-label="Devaro English home">
+        <span class="text-[25px] font-black leading-none tracking-normal text-text-main sm:text-[32px]">Devaro <span class="text-primary">English</span></span>
+      </a>
 
-    <nav class="hidden justify-center gap-[clamp(14px,3vw,34px)] text-sm font-extrabold text-muted lg:flex" aria-label="Main navigation">
-      <a v-for="item in navItems" :key="item.href" :href="item.href" class="underline-offset-6 decoration-primary decoration-2 transition hover:underline">{{ item.label }}</a>
-    </nav>
+      <nav class="hidden justify-center gap-7 text-base font-extrabold text-muted xl:gap-9 lg:flex" aria-label="Main navigation">
+        <a v-for="item in navItems" :key="item.href" :href="item.href" class="flex min-h-11 items-center underline-offset-6 decoration-primary decoration-2 transition hover:underline">{{ item.label }}</a>
+      </nav>
 
-    <div class="flex items-center gap-3">
-      <LanguageToggle :locale="locale" @change="emit('changeLocale', $event)" />
-      <div class="hidden items-center gap-2 lg:flex">
-        <SocialIconButton label="Instagram" />
-        <SocialIconButton label="Telegram" />
+      <div class="flex items-center gap-3">
+        <LanguageToggle :locale="locale" @change="emit('changeLocale', $event)" />
+        <div class="hidden items-center gap-2 lg:flex">
+          <SocialIconButton label="Instagram" />
+          <SocialIconButton label="Telegram" />
+        </div>
       </div>
     </div>
   </header>
