@@ -59,6 +59,7 @@ export const siteContent = {
     lessonFlow: {
       eyebrow: 'Як проходять заняття',
       title: 'Менеджер підбирає викладача та темп під вашу ціль.',
+      text: 'Враховуємо мету, рівень, графік і побажання, щоб заняття одразу були зрозумілими та комфортними.',
       steps: [
         {
           label: 'Швидка консультація',
@@ -175,6 +176,7 @@ export const siteContent = {
     lessonFlow: {
       eyebrow: 'How lessons work',
       title: 'The manager matches the teacher and pace to your goal.',
+      text: 'We factor in the learnerʼs goal, level, schedule, and preferences so lessons feel focused from the start.',
       steps: [
         {
           label: 'Quick consultation',

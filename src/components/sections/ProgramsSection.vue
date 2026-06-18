@@ -17,10 +17,10 @@ const stickers: StickerPlacement[] = [
 <template>
   <section
     id="programs"
-    class="relative mx-auto mt-5 max-w-[1840px] overflow-hidden bg-panel py-[clamp(48px,8vw,72px)] lg:py-[clamp(72px,8vw,110px)]"
+    class="relative mx-auto mt-5 max-w-[1840px] overflow-hidden bg-panel px-[clamp(24px,4vw,62px)] py-[clamp(48px,8vw,72px)] lg:py-[clamp(72px,8vw,110px)]"
   >
     <DecorativeStickerField :stickers="stickers" />
-    <div class="site-container relative z-10">
+    <div class="relative z-10">
       <SectionHeading :eyebrow="content.eyebrow" :title="content.title" />
       <div class="grid gap-5 md:grid-cols-2 lg:gap-6 xl:grid-cols-6">
         <RevealOnScroll

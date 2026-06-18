@@ -65,6 +65,7 @@ export interface SiteCopy {
   lessonFlow: {
     eyebrow: string
     title: string
+    text: string
     steps: LessonFlowStep[]
     ctaText: string
     ctaLabel: string
