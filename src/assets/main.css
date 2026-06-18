@@ -2,8 +2,10 @@
 @import "tailwindcss";
 
 @theme {
-  --font-primary: var(--primary-font-family);
-  --font-secondary: var(--secondary-font-family);
+  --font-body: var(--body-font-family);
+  --font-ui: var(--ui-font-family);
+  --font-heading: var(--heading-font-family);
+  --font-logo: var(--logo-font-family);
   --color-text-main: #172e28;
   --color-text-muted: #59645f;
   --color-page: #f7f4ed;
@@ -65,7 +67,7 @@
 
   body {
     @apply m-0 bg-page text-text-main antialiased;
-    font-family: var(--primary-font-family);
+    font-family: var(--body-font-family);
   }
 
   ::selection {
@@ -77,13 +79,16 @@
   }
 
   button,
-  input {
+  input,
+  select,
+  textarea {
     font: inherit;
+    font-family: var(--ui-font-family);
   }
 
   h1,
   h2 {
-    font-family: var(--secondary-font-family);
+    font-family: var(--heading-font-family);
     font-weight: 700;
     letter-spacing: 0;
     text-transform: uppercase;
@@ -185,12 +190,20 @@
 }
 
 @layer utilities {
-  .primary-font-family {
-    font-family: var(--primary-font-family);
+  .body-font-family {
+    font-family: var(--body-font-family);
   }
 
-  .secondary-font-family {
-    font-family: var(--secondary-font-family);
+  .ui-font-family {
+    font-family: var(--ui-font-family);
+  }
+
+  .heading-font-family {
+    font-family: var(--heading-font-family);
+  }
+
+  .logo-font-family {
+    font-family: var(--logo-font-family);
   }
 
   @keyframes float-soft {

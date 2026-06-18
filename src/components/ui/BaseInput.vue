@@ -16,7 +16,7 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <label :class="['grid gap-2 text-sm font-extrabold', tone === 'dark' ? 'text-white/72' : 'text-muted']">
+  <label :class="['ui-font-family grid gap-2 text-sm font-extrabold', tone === 'dark' ? 'text-white/72' : 'text-muted']">
     <span>{{ label }}</span>
     <input
       :value="modelValue"

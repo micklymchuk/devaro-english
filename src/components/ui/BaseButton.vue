@@ -14,7 +14,7 @@ withDefaults(
 )
 
 const baseClass =
-  'printed-shadow inline-flex min-h-[54px] items-center justify-center border-2 px-5 text-center text-sm font-black leading-tight transition duration-150 active:shadow-none sm:min-h-[58px] sm:px-6'
+  'ui-font-family printed-shadow inline-flex min-h-[54px] items-center justify-center border-2 px-5 text-center text-sm font-black leading-tight transition duration-150 active:shadow-none sm:min-h-[58px] sm:px-6'
 
 const variants = {
   primary: 'focus-on-color border-primary bg-primary text-white',

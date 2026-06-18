@@ -24,7 +24,7 @@ defineProps<{
             class="flex min-h-[104px] flex-col justify-center px-5 py-4 transition duration-500 ease-out sm:px-6 lg:min-h-[124px] lg:px-8 lg:first:pl-0 lg:last:pr-0"
             :style="{ transitionDelay: `${index * 100}ms` }"
           >
-            <strong class="secondary-font-family block text-[clamp(2.35rem,13vw,3.25rem)] font-bold leading-none text-white lg:text-[clamp(2.65rem,4vw,4.15rem)]">
+            <strong class="heading-font-family block text-[clamp(2.35rem,13vw,3.25rem)] font-bold leading-none text-white lg:text-[clamp(2.65rem,4vw,4.15rem)]">
               <CountUpNumber :value="stat.value" :active="isInView" />
             </strong>
             <span class="mt-3 block max-w-[15rem] text-base font-extrabold leading-snug text-white/85 md:text-lg">

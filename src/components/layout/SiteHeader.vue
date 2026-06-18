@@ -19,10 +19,10 @@ const emit = defineEmits<{
   >
     <div class="site-container grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 lg:grid-cols-[auto_1fr_auto] lg:gap-8">
       <a class="flex min-h-11 items-center gap-2.5 font-extrabold" href="#top" aria-label="Fluyo School home">
-        <span class="secondary-font-family text-[25px] font-bold leading-none tracking-normal text-text-main sm:text-[32px]">Fluyo <span class="text-primary">School</span></span>
+        <span class="logo-font-family text-[25px] font-bold leading-none tracking-normal text-text-main sm:text-[32px]">Fluyo <span class="text-primary">School</span></span>
       </a>
 
-      <nav class="hidden justify-center gap-7 text-base font-extrabold text-muted xl:gap-9 lg:flex" aria-label="Main navigation">
+      <nav class="ui-font-family hidden justify-center gap-7 text-base font-extrabold text-muted xl:gap-9 lg:flex" aria-label="Main navigation">
         <a v-for="item in navItems" :key="item.href" :href="item.href" class="flex min-h-11 items-center underline-offset-6 decoration-primary decoration-2 transition hover:underline">{{ item.label }}</a>
       </nav>
 
