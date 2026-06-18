@@ -84,6 +84,8 @@ export const siteContent = {
     teachers: {
       eyebrow: 'Викладачі',
       title: 'Поки це тестові профілі, які пізніше можна замінити реальним контентом.',
+      ctaLabel: 'Підібрати викладача',
+      ctaHref: '#contact',
       items: [
         {
           name: 'Олена',
@@ -108,6 +110,9 @@ export const siteContent = {
     pricing: {
       eyebrow: 'Тестові пакети',
       title: 'Замініть ці ціни на реальні перед публікацією школи.',
+      note: 'Ціни показані за весь пакет уроків. Остаточні умови потрібно підтвердити перед публікацією.',
+      recommendedLabel: 'Рекомендуємо',
+      ctaLabel: 'Обрати пакет',
       items: [
         { name: 'Старт', count: '4 уроки', text: 'Щоб спробувати формат і викладача', price: '2 800 грн' },
         { name: 'Ріст', count: '8 уроків', text: 'Для стабільного щотижневого прогресу', price: '5 200 грн' },
@@ -117,8 +122,14 @@ export const siteContent = {
     social: {
       eyebrow: 'Instagram',
       title: 'Тепла школа з персональною увагою',
-      text: 'Instagram-блок пізніше може показувати відео викладачів, відгуки учнів, моменти з уроків та корисні поради з англійської.',
-      testimonial: 'Менеджер допоміг підібрати викладача для доньки, і заняття нарешті стали персональними.',
+      text: 'Блок підготовлений для реальних відео викладачів, відгуків учнів, моментів з уроків та корисних порад з англійської.',
+      items: [
+        { title: 'Відео викладачів', text: 'Короткі знайомства з викладачами можна додати після підготовки матеріалів.' },
+        { title: 'Історії учнів', text: 'Реальні відгуки або результати потрібно додати тільки після підтвердження.' },
+        { title: 'Поради з англійської', text: 'Корисний контент з Instagram можна підключити, коли буде реальне посилання.' },
+      ],
+      ctaLabel: 'Звʼязатися щодо навчання',
+      ctaHref: '#contact',
     },
     contact: {
       eyebrow: 'Контакти',
@@ -127,6 +138,12 @@ export const siteContent = {
       fields: ['Імʼя', 'Мета навчання', 'Зручний контакт'],
       submitLabel: 'Надіслати заявку',
       channels: ['Telegram', 'Instagram', 'Телефон', 'Email'],
+    },
+    footer: {
+      text: 'Онлайн-школа англійської з індивідуальними Zoom-заняттями та підбором викладача під вашу ціль.',
+      navTitle: 'Навігація',
+      contactTitle: 'Контакти',
+      copyright: '© 2026 Devaro English. Усі права захищено.',
     },
   },
   en: {
@@ -200,6 +217,8 @@ export const siteContent = {
     teachers: {
       eyebrow: 'Meet the teachers',
       title: 'Mock profiles for now, structured so real teacher content can replace them later.',
+      ctaLabel: 'Match me with a teacher',
+      ctaHref: '#contact',
       items: [
         {
           name: 'Olena',
@@ -224,6 +243,9 @@ export const siteContent = {
     pricing: {
       eyebrow: 'Mock packages',
       title: 'Replace these with real pricing when the school is ready to publish.',
+      note: 'Prices are shown for the full lesson package. Final terms should be confirmed before publication.',
+      recommendedLabel: 'Recommended',
+      ctaLabel: 'Choose package',
       items: [
         { name: 'Start', count: '4 lessons', text: 'For trying the teacher fit', price: 'UAH 2,800' },
         { name: 'Grow', count: '8 lessons', text: 'For steady weekly progress', price: 'UAH 5,200' },
@@ -233,8 +255,14 @@ export const siteContent = {
     social: {
       eyebrow: 'Instagram',
       title: 'Warm school feel, personal attention',
-      text: 'The Instagram section can later show teacher reels, student feedback, lesson moments, and useful English tips.',
-      testimonial: 'The manager helped us choose a teacher for our daughter, and the lessons finally felt personal.',
+      text: 'This block is ready for real teacher reels, student feedback, lesson moments, and useful English tips.',
+      items: [
+        { title: 'Teacher reels', text: 'Short teacher introductions can be added after the media is prepared.' },
+        { title: 'Student stories', text: 'Real reviews or outcomes should be added only after confirmation.' },
+        { title: 'English tips', text: 'Useful Instagram content can be connected when a real destination exists.' },
+      ],
+      ctaLabel: 'Ask about lessons',
+      ctaHref: '#contact',
     },
     contact: {
       eyebrow: 'Contact',
@@ -243,6 +271,12 @@ export const siteContent = {
       fields: ['Name', 'Learner goal', 'Preferred contact'],
       submitLabel: 'Send request',
       channels: ['Telegram', 'Instagram', 'Phone', 'Email'],
+    },
+    footer: {
+      text: 'Online English school with individual Zoom lessons and teacher matching for your goal.',
+      navTitle: 'Navigation',
+      contactTitle: 'Contact',
+      copyright: '© 2026 Devaro English. All rights reserved.',
     },
   },
 } satisfies Record<Locale, SiteCopy>

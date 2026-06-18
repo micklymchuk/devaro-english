@@ -22,25 +22,27 @@ const stickers: StickerPlacement[] = [
 <template>
   <section
     id="contact"
-    class="collage-section grid items-start gap-7 overflow-hidden sm:gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(320px,0.65fr)]"
+    class="collage-section overflow-hidden bg-panel"
   >
     <DecorativeStickerField :stickers="stickers" />
-    <RevealOnScroll class="relative z-10">
-      <p class="collage-badge mb-5 rotate-[-2deg]">{{ content.eyebrow }}</p>
-      <h2 class="collage-heading mb-0 max-w-[780px]">{{ content.title }}</h2>
-      <p class="mt-4 max-w-[650px] text-base leading-relaxed text-muted sm:mt-7 sm:text-lg">{{ content.text }}</p>
-      <div class="mt-5 flex flex-wrap items-center gap-2.5 sm:mt-6">
-        <ContactChannelLink v-for="channel in content.channels" :key="channel" :label="channel" />
-      </div>
-    </RevealOnScroll>
+    <div class="site-container grid items-start gap-8 sm:gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(340px,0.65fr)]">
+      <RevealOnScroll class="relative z-10">
+        <p class="collage-badge mb-5 rotate-[-2deg]">{{ content.eyebrow }}</p>
+        <h2 class="collage-heading mb-0 max-w-[780px] text-balance">{{ content.title }}</h2>
+        <p class="mt-4 max-w-[650px] text-base leading-relaxed text-muted sm:mt-7 sm:text-lg">{{ content.text }}</p>
+        <div class="mt-5 flex flex-wrap items-center gap-2.5 sm:mt-6">
+          <ContactChannelLink v-for="channel in content.channels" :key="channel" :label="channel" />
+        </div>
+      </RevealOnScroll>
 
-    <RevealOnScroll :delay="140" direction="left" class="relative z-10">
-    <BaseCard as="div" class="p-5 sm:p-7">
-      <form class="grid gap-4" aria-label="Contact request form">
-        <BaseInput v-for="field in content.fields" :key="field" v-model="form[field]" :label="field" />
-        <BaseButton type="button">{{ content.submitLabel }}</BaseButton>
-      </form>
-    </BaseCard>
-    </RevealOnScroll>
+      <RevealOnScroll :delay="140" direction="left" class="relative z-10">
+        <BaseCard as="div" class="p-5 before:absolute before:-top-3 before:left-8 before:h-6 before:w-24 before:rotate-[-2deg] before:bg-[#d9d6cf] before:content-[''] sm:p-7">
+          <form class="grid gap-4" aria-label="Contact request form">
+            <BaseInput v-for="field in content.fields" :key="field" v-model="form[field]" :label="field" />
+            <BaseButton type="button">{{ content.submitLabel }}</BaseButton>
+          </form>
+        </BaseCard>
+      </RevealOnScroll>
+    </div>
   </section>
 </template>

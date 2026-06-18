@@ -53,9 +53,15 @@ function animate() {
 }
 
 watch(
-  () => props.active,
-  (active) => {
-    if (active) animate()
+  [() => props.active, parsed],
+  ([active]) => {
+    if (active) {
+      current.value = 0
+      animate()
+      return
+    }
+
+    current.value = parsed.value.target
   },
   { immediate: true },
 )

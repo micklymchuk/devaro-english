@@ -16,7 +16,7 @@ const icon = computed(() => (props.label === 'Instagram' ? Instagram : Telegram)
     as="a"
     :href="href ?? '#contact'"
     :aria-label="label"
-    class="focus-on-color printed-shadow grid size-12 place-items-center bg-primary text-white"
+    class="focus-on-color printed-shadow grid size-11 place-items-center border-2 border-primary bg-primary text-white transition hover:bg-primary-hover sm:size-12"
   >
     <component :is="icon" :width="24" :height="24" stroke-width="2.4" aria-hidden="true" />
   </InteractivePaint>

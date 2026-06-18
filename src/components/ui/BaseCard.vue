@@ -17,7 +17,7 @@ withDefaults(
   <component
     :is="as"
     :class="[
-      'paper-card',
+      'paper-card relative',
       padded && 'p-5 sm:p-6',
       overflowHidden && 'overflow-hidden p-0',
     ]"

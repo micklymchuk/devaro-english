@@ -4,12 +4,15 @@
 @theme {
   --color-text-main: #172e28;
   --color-text-muted: #59645f;
+  --color-muted: #59645f;
   --color-page: #f7f4ed;
   --color-surface: #f7f4ed;
+  --color-surface-warm: #fbf8f1;
   --color-surface-soft: #fffefb;
   --color-panel: #fffefb;
   --color-primary: #23724f;
   --color-primary-hover: #2b805b;
+  --color-deep-green: #123b31;
   --color-tertiary: #a14f34;
   --color-highlight: #d65e84;
   --color-surface-muted: #f1eee7;
@@ -76,7 +79,8 @@
   }
 
   button,
-  input {
+  input,
+  textarea {
     font: inherit;
   }
 
@@ -123,17 +127,59 @@
     }
   }
 
+  .page-frame {
+    @apply mx-auto max-w-[1840px] overflow-hidden bg-page;
+  }
+
+  .section-shell {
+    @apply relative mx-auto mt-5 max-w-[1840px] bg-panel;
+  }
+
+  .section-pad {
+    padding-block: 64px;
+  }
+
+  @media (min-width: 768px) {
+    .section-pad {
+      padding-block: 72px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-pad {
+      padding-block: 88px;
+    }
+  }
+
   .collage-section {
-    @apply relative mx-auto mt-5 max-w-[1840px] bg-panel px-[clamp(24px,4vw,62px)] py-[clamp(38px,8vw,72px)] lg:py-[clamp(64px,8vw,110px)];
+    position: relative;
+    max-width: 1840px;
+    margin-inline: auto;
+    margin-top: 20px;
+    background: #fffefb;
+    padding-block: 64px;
+  }
+
+  @media (min-width: 768px) {
+    .collage-section {
+      padding-block: 72px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .collage-section {
+      padding-block: 88px;
+    }
   }
 
   .paper-card {
-    background: #f7f4ed;
-    box-shadow: 6px 6px 0 #d65e84;
+    background: #fbf8f1;
+    border: 1px solid rgba(23, 46, 40, 0.14);
+    box-shadow: 5px 5px 0 rgba(214, 94, 132, 0.62);
   }
 
   .paper-card-featured {
-    box-shadow: 8px 8px 0 #d65e84;
+    box-shadow: 6px 6px 0 rgba(214, 94, 132, 0.86);
   }
 
   .printed-shadow {
@@ -147,6 +193,25 @@
       linear-gradient(90deg, rgba(16, 28, 25, 0.7) 1px, transparent 1px);
     background-size: 27px 27px;
     clip-path: polygon(6% 6%, 100% 0, 94% 93%, 63% 87%, 52% 100%, 17% 89%, 0 57%);
+  }
+
+  .paper-grid {
+    background-image:
+      linear-gradient(rgba(23, 46, 40, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23, 46, 40, 0.06) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .paper-noise {
+    background-image:
+      radial-gradient(rgba(23, 46, 40, 0.04) 0.6px, transparent 0.6px),
+      radial-gradient(rgba(214, 94, 132, 0.035) 0.7px, transparent 0.7px);
+    background-position:
+      0 0,
+      11px 9px;
+    background-size:
+      18px 18px,
+      26px 26px;
   }
 
   .dot-field {
@@ -165,24 +230,53 @@
   }
 
   .collage-badge {
-    @apply w-fit px-2 py-1 text-sm font-black text-text-main;
+    @apply w-fit px-2 py-1 text-[13px] font-black leading-none text-text-main;
     background: #d65e84;
   }
 
+  .poster-h1 {
+    font-size: 40px;
+    line-height: 1.04;
+  }
+
   .collage-heading {
-    font-size: clamp(2.1rem, 7vw, 2.85rem);
-    line-height: 0.98;
+    font-size: 31px;
+    line-height: 1.08;
   }
 
   @media (min-width: 640px) {
+    .poster-h1 {
+      font-size: 50px;
+      line-height: 1;
+    }
+
     .collage-heading {
-      font-size: clamp(2.45rem, 5.8vw, 3.15rem);
+      font-size: 38px;
+      line-height: 1.05;
     }
   }
 
   @media (min-width: 1024px) {
+    .poster-h1 {
+      font-size: 68px;
+      line-height: 0.98;
+    }
+
     .collage-heading {
-      font-size: clamp(3.05rem, 3.65vw, 4.25rem);
+      font-size: 44px;
+      line-height: 1.02;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .poster-h1 {
+      font-size: 76px;
+      line-height: 0.96;
+    }
+
+    .collage-heading {
+      font-size: 48px;
+      line-height: 1;
     }
   }
 }

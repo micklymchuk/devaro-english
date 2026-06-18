@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref, watchEffect } from 'vue'
+import SiteFooter from '@/components/layout/SiteFooter.vue'
 import SiteHeader from '@/components/layout/SiteHeader.vue'
 import ContactSection from '@/components/sections/ContactSection.vue'
 import HeroSection from '@/components/sections/HeroSection.vue'
@@ -39,5 +40,6 @@ const changeLocale = (nextLocale: Locale) => {
     <PricingSection :content="content.pricing" />
     <SocialProofSection :content="content.social" />
     <ContactSection :content="content.contact" />
+    <SiteFooter :content="content.footer" :nav-items="content.nav" :channels="content.contact.channels" />
   </main>
 </template>

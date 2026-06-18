@@ -33,8 +33,8 @@ const offsetClass = computed(() => {
     ref="target"
     :style="{ transitionDelay: `${delay}ms` }"
     :class="[
-      'reveal-content motion-safe:transition-all motion-safe:duration-700 motion-safe:ease-out',
-      isInView ? 'opacity-100 translate-x-0 translate-y-0' : `opacity-0 ${offsetClass}`,
+      'reveal-content motion-safe:transition-transform motion-safe:duration-700 motion-safe:ease-out',
+      isInView ? 'translate-x-0 translate-y-0' : offsetClass,
     ]"
   >
     <slot :is-in-view="isInView" />

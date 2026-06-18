@@ -34,6 +34,11 @@ export interface PricingPackage {
   price: string
 }
 
+export interface SocialProofSlot {
+  title: string
+  text: string
+}
+
 export interface SiteCopy {
   nav: NavItem[]
   hero: {
@@ -73,18 +78,25 @@ export interface SiteCopy {
   teachers: {
     eyebrow: string
     title: string
+    ctaLabel: string
+    ctaHref: string
     items: TeacherProfile[]
   }
   pricing: {
     eyebrow: string
     title: string
+    note: string
+    recommendedLabel: string
+    ctaLabel: string
     items: PricingPackage[]
   }
   social: {
     eyebrow: string
     title: string
     text: string
-    testimonial: string
+    items: SocialProofSlot[]
+    ctaLabel: string
+    ctaHref: string
   }
   contact: {
     eyebrow: string
@@ -93,5 +105,11 @@ export interface SiteCopy {
     fields: string[]
     submitLabel: string
     channels: string[]
+  }
+  footer: {
+    text: string
+    navTitle: string
+    contactTitle: string
+    copyright: string
   }
 }
