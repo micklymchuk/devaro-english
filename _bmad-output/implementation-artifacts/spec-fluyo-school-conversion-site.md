@@ -1,18 +1,18 @@
 ---
-title: 'Devaro English Conversion Site'
+title: 'Fluyo School Conversion Site'
 type: 'feature'
 created: '2026-05-28'
 status: 'done'
 route: 'one-shot'
 ---
 
-# Devaro English Conversion Site
+# Fluyo School Conversion Site
 
 ## Intent
 
 **Problem:** The project still showed the default Vue starter screen, while the product brief calls for a warm bilingual conversion website for a small online English school serving Ukrainian learners.
 
-**Approach:** Replace the starter screen with a responsive Vue single-page site for Devaro English, then refactor it into typed content data, reusable section components, Tailwind CSS styling, and shared UI primitives for buttons, cards, inputs, contact links, headings, and language switching.
+**Approach:** Replace the starter screen with a responsive Vue single-page site for Fluyo School, then refactor it into typed content data, reusable section components, Tailwind CSS styling, and shared UI primitives for buttons, cards, inputs, contact links, headings, and language switching.
 
 ## Suggested Review Order
 
@@ -25,7 +25,7 @@ route: 'one-shot'
 7. [src/assets/main.css](../../src/assets/main.css) -- Review Tailwind import, theme tokens, and base styles.
 8. [vite.config.ts](../../vite.config.ts) -- Confirm Tailwind's Vite plugin is registered.
 9. [index.html](../../index.html) -- Confirm the browser title now matches the school brand.
-10. [brief.md](../planning-artifacts/briefs/brief-devaro-english-2026-05-28/brief.md) -- Check the product scope and assumptions that guided the implementation.
+10. [brief.md](../planning-artifacts/briefs/brief-fluyo-school-2026-05-28/brief.md) -- Check the product scope and assumptions that guided the implementation.
 
 ## Verification
 

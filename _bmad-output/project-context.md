@@ -1,5 +1,5 @@
 ---
-project_name: 'devaro-english'
+project_name: 'fluyo-school'
 user_name: 'king'
 date: '2026-06-11'
 sections_completed: ['technology_stack_versions', 'language_specific_rules', 'framework_specific_rules', 'testing_rules', 'code_quality_style_rules', 'development_workflow_rules', 'critical_dont_miss_rules']
@@ -90,7 +90,7 @@ _This file contains critical rules and patterns that AI agents must follow when 
 
 ### Critical Don't-Miss Rules
 
-- This is a branded bilingual Devaro English conversion site, not a generic Vue starter; preserve the school-specific content model and visual direction.
+- This is a branded bilingual Fluyo School conversion site, not a generic Vue starter; preserve the school-specific content model and visual direction.
 - Ukrainian (`uk`) and English (`en`) content must stay structurally parallel in `siteContent`; when adding a field to one locale, add it to the other and update `SiteCopy`.
 - Do not scatter marketing copy inside components; components should render typed content passed from `siteContent`.
 - Do not replace the current collage/editorial visual language with generic SaaS cards, gradients, or starter-template styling.

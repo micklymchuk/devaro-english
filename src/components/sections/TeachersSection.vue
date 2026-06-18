@@ -25,7 +25,7 @@ defineProps<{
           <div class="relative">
             <img
               :src="teacher.image"
-              :alt="`${teacher.name}, Devaro English teacher`"
+              :alt="`${teacher.name}, Fluyo School teacher`"
               class="motion-still aspect-[4/3] w-full object-cover saturate-[0.9]"
             />
             <div class="absolute inset-x-0 bottom-0 h-20 bg-linear-to-t from-primary/45 to-transparent"></div>

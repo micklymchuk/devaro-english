@@ -1,5 +1,5 @@
 ---
-name: Devaro English
+name: Fluyo School
 status: draft
 updated: 2026-06-11
 sources:
@@ -21,7 +21,7 @@ sources:
   - imports/site-template-style-reference.jpg
 ---
 
-# Devaro English - Experience Spine
+# Fluyo School - Experience Spine
 
 ## Foundation
 

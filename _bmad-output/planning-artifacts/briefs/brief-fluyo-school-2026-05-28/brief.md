@@ -1,15 +1,15 @@
 ---
-title: Product Brief: Devaro English
+title: Product Brief: Fluyo School
 status: ready
 created: 2026-05-28
 updated: 2026-05-28
 ---
 
-# Product Brief: Devaro English
+# Product Brief: Fluyo School
 
 ## Executive Summary
 
-Devaro English is a warm, approachable online English school for Ukrainian learners who want personal support from real teachers. The school serves adults, teenagers, children, exam-preparation learners, and people learning English for relocation, work, or daily life abroad.
+Fluyo School is a warm, approachable online English school for Ukrainian learners who want personal support from real teachers. The school serves adults, teenagers, children, exam-preparation learners, and people learning English for relocation, work, or daily life abroad.
 
 The first product should be a bilingual conversion website, not a full learning platform. Its job is to make the offer feel trustworthy, explain who the school helps, show teacher credibility, and move visitors toward a low-friction action: contacting a school manager or booking a consultation call.
 
@@ -17,11 +17,11 @@ The first product should be a bilingual conversion website, not a full learning 
 
 Ukrainian learners often need English for different urgent reasons: relocation, interviews, school progress, exams, travel, or confidence in everyday communication. A broad course catalog can feel impersonal, while a single-teacher page may not feel scalable or reliable enough for families and long-term learners.
 
-The visitor needs to quickly understand whether Devaro English can match them with the right teacher, adapt lessons to their goals, and provide a clear next step without requiring immediate payment or a complicated registration flow.
+The visitor needs to quickly understand whether Fluyo School can match them with the right teacher, adapt lessons to their goals, and provide a clear next step without requiring immediate payment or a complicated registration flow.
 
 ## The Solution
 
-Devaro English will present itself as a small online school with several teachers and personalized Zoom lessons. The site should communicate a friendly and warm brand: supportive, human, practical, and easy to contact.
+Fluyo School will present itself as a small online school with several teachers and personalized Zoom lessons. The site should communicate a friendly and warm brand: supportive, human, practical, and easy to contact.
 
 The first version should include Ukrainian and English language content, mocked teacher profiles, mocked pricing/packages, program sections for core learner groups, and visible contact options across the page. The primary call to action is to book a call or contact the school manager through the visitor's preferred channel.
 
@@ -35,7 +35,7 @@ The first version should include Ukrainian and English language content, mocked 
 
 ## Positioning
 
-Devaro English should lead with personalized learning, not generic course volume. The key message is: a manager helps understand the learner's goal, then matches them with a teacher and lesson path that fits their age, level, schedule, and reason for learning.
+Fluyo School should lead with personalized learning, not generic course volume. The key message is: a manager helps understand the learner's goal, then matches them with a teacher and lesson path that fits their age, level, schedule, and reason for learning.
 
 ## First Version Scope
 
@@ -69,4 +69,4 @@ Out of scope:
 
 ## Future Direction
 
-If the first site succeeds, Devaro English can expand into group lessons, richer program pages, real booking integrations, student onboarding forms, and content marketing around relocation English, exam preparation, and children learning online.
+If the first site succeeds, Fluyo School can expand into group lessons, richer program pages, real booking integrations, student onboarding forms, and content marketing around relocation English, exam preparation, and children learning online.

@@ -1,4 +1,4 @@
-# Accessibility Review - Devaro English UX Contract
+# Accessibility Review - Fluyo School UX Contract
 
 ## Scope
 

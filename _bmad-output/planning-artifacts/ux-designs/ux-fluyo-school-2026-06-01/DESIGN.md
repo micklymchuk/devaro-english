@@ -1,5 +1,5 @@
 ---
-name: Devaro English
+name: Fluyo School
 description: Responsive English-school landing page with refined editorial poster identity.
 status: draft
 updated: 2026-06-11
@@ -188,7 +188,7 @@ components:
 
 ## Brand & Style
 
-Devaro English keeps its bold editorial poster identity: warm paper, dark-green structure, pink collage accents, square printed blocks, and teacher/sticker imagery. The refinement is discipline. The page should feel more professional because hierarchy, spacing, and decoration are controlled, not because the identity is replaced with generic SaaS styling.
+Fluyo School keeps its bold editorial poster identity: warm paper, dark-green structure, pink collage accents, square printed blocks, and teacher/sticker imagery. The refinement is discipline. The page should feel more professional because hierarchy, spacing, and decoration are controlled, not because the identity is replaced with generic SaaS styling.
 
 Use collage as punctuation. The primary reading experience is a clean landing page with strong type, clear conversion actions, and generous negative space. Poster energy appears in the hero, selected badges, a few offset cards, and a small number of sticker/grid/torn-paper moments. Do not make every section equally loud.
 

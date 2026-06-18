@@ -1,4 +1,4 @@
-# Validation Report - Devaro English
+# Validation Report - Fluyo School
 
 - **DESIGN.md:** `DESIGN.md`
 - **EXPERIENCE.md:** `EXPERIENCE.md`

@@ -18,8 +18,8 @@ const emit = defineEmits<{
     class="sticky top-2 z-30 mx-auto max-w-[1840px] bg-panel/95 py-3 shadow-[0_4px_0_#d65e84] backdrop-blur-xl sm:top-3 sm:py-4 sm:shadow-[0_5px_0_#d65e84]"
   >
     <div class="site-container grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3 lg:grid-cols-[auto_1fr_auto] lg:gap-8">
-      <a class="flex min-h-11 items-center gap-2.5 font-extrabold" href="#top" aria-label="Devaro English home">
-        <span class="text-[25px] font-black leading-none tracking-normal text-text-main sm:text-[32px]">Devaro <span class="text-primary">English</span></span>
+      <a class="flex min-h-11 items-center gap-2.5 font-extrabold" href="#top" aria-label="Fluyo School home">
+        <span class="text-[25px] font-black leading-none tracking-normal text-text-main sm:text-[32px]">Fluyo <span class="text-primary">School</span></span>
       </a>
 
       <nav class="hidden justify-center gap-7 text-base font-extrabold text-muted xl:gap-9 lg:flex" aria-label="Main navigation">

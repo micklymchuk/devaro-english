@@ -5,15 +5,15 @@ created: '2026-06-01'
 status: 'done'
 baseline_commit: '47ef3e71c2e81aa1c2efeb8a989a93181cd23ed9'
 context:
-  - '{project-root}/_bmad-output/planning-artifacts/ux-designs/ux-devaro-english-2026-06-01/DESIGN.md'
-  - '{project-root}/_bmad-output/planning-artifacts/ux-designs/ux-devaro-english-2026-06-01/EXPERIENCE.md'
+  - '{project-root}/_bmad-output/planning-artifacts/ux-designs/ux-fluyo-school-2026-06-01/DESIGN.md'
+  - '{project-root}/_bmad-output/planning-artifacts/ux-designs/ux-fluyo-school-2026-06-01/EXPERIENCE.md'
 ---
 
 <frozen-after-approval reason="human-owned intent — do not modify unless human renegotiates">
 
 ## Intent
 
-**Problem:** The current rounded education-site styling does not match the approved Devaro English visual direction. It needs a selective collage identity that feels energetic for students, teens, children, and adults without becoming childish or corporate.
+**Problem:** The current rounded education-site styling does not match the approved Fluyo School visual direction. It needs a selective collage identity that feels energetic for students, teens, children, and adults without becoming childish or corporate.
 
 **Approach:** Restyle the existing responsive Vue landing page using the finalized UX spine: warm paper surfaces, lighter green structure, pink offset layers, square printed blocks, condensed uppercase headings, torn-paper accents, dark grid fragments, and the approved decorative sticker family. Preserve content, section order, teacher photos, locale behavior, and existing interaction scope.
 
