@@ -6,6 +6,7 @@ import BaseButton from '@/components/ui/BaseButton.vue'
 import BaseCard from '@/components/ui/BaseCard.vue'
 import BaseInput from '@/components/ui/BaseInput.vue'
 import ContactChannelLink from '@/components/ui/ContactChannelLink.vue'
+import SectionWrapper from '@/components/ui/SectionWrapper.vue'
 import type { SiteCopy } from '@/types/site'
 
 defineProps<{
@@ -20,11 +21,14 @@ const stickers: StickerPlacement[] = [
 </script>
 
 <template>
-  <section
+  <SectionWrapper
     id="contact"
-    class="collage-section grid items-start gap-7 overflow-hidden sm:gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(320px,0.65fr)]"
+    content-class="grid items-start gap-7 sm:gap-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(320px,0.65fr)]"
   >
-    <DecorativeStickerField :stickers="stickers" />
+    <template #decor>
+      <DecorativeStickerField :stickers="stickers" />
+    </template>
+
     <RevealOnScroll class="relative z-10">
       <p class="collage-badge mb-5 rotate-[-2deg]">{{ content.eyebrow }}</p>
       <h2 class="collage-heading mb-0 max-w-[780px]">{{ content.title }}</h2>
@@ -35,12 +39,12 @@ const stickers: StickerPlacement[] = [
     </RevealOnScroll>
 
     <RevealOnScroll :delay="140" direction="left" class="relative z-10">
-    <BaseCard as="div" class="p-5 sm:p-7">
-      <form class="grid gap-4" aria-label="Contact request form">
-        <BaseInput v-for="field in content.fields" :key="field" v-model="form[field]" :label="field" />
-        <BaseButton type="button">{{ content.submitLabel }}</BaseButton>
-      </form>
-    </BaseCard>
+      <BaseCard as="div" class="p-5 sm:p-7">
+        <form class="grid gap-4" aria-label="Contact request form">
+          <BaseInput v-for="field in content.fields" :key="field" v-model="form[field]" :label="field" />
+          <BaseButton type="button">{{ content.submitLabel }}</BaseButton>
+        </form>
+      </BaseCard>
     </RevealOnScroll>
-  </section>
+  </SectionWrapper>
 </template>

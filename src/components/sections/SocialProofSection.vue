@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import RevealOnScroll from '@/components/motion/RevealOnScroll.vue'
+import SectionWrapper from '@/components/ui/SectionWrapper.vue'
 import type { SiteCopy } from '@/types/site'
 
 defineProps<{
@@ -8,7 +9,7 @@ defineProps<{
 </script>
 
 <template>
-  <section class="collage-section grid items-center gap-7 sm:gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(280px,0.7fr)]">
+  <SectionWrapper content-class="grid items-center gap-7 sm:gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(280px,0.7fr)]">
     <RevealOnScroll>
       <p class="collage-badge mb-5 rotate-[-2deg]">{{ content.eyebrow }}</p>
       <h2 class="collage-heading mb-0 max-w-[760px]">{{ content.title }}</h2>
@@ -20,5 +21,5 @@ defineProps<{
         {{ content.testimonial }}
       </blockquote>
     </RevealOnScroll>
-  </section>
+  </SectionWrapper>
 </template>

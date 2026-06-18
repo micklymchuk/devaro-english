@@ -123,10 +123,6 @@
     }
   }
 
-  .collage-section {
-    @apply relative mx-auto mt-5 max-w-[1840px] bg-panel px-[clamp(24px,4vw,62px)] py-[clamp(38px,8vw,72px)] lg:py-[clamp(64px,8vw,110px)];
-  }
-
   .paper-card {
     background: #f7f4ed;
     box-shadow: 6px 6px 0 #d65e84;
