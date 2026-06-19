@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { Component } from 'vue'
+import { GraduationCap, Learning, PageSearch, Suitcase, UserBadgeCheck } from '@iconoir/vue'
 import DecorativeStickerField, { type StickerPlacement } from '@/components/motion/DecorativeStickerField.vue'
 import RevealOnScroll from '@/components/motion/RevealOnScroll.vue'
 import SectionHeading from '@/components/ui/SectionHeading.vue'
@@ -13,6 +15,15 @@ const stickers: StickerPlacement[] = [
   { src: '/stickers/open-book.png', top: '2%', right: '3%', width: 'clamp(86px, 9vw, 145px)', rotate: 7, hideBelow: 'md' },
 ]
 
+const programIcons = [
+  UserBadgeCheck,
+  GraduationCap,
+  Learning,
+  PageSearch,
+  Suitcase,
+] satisfies Component[]
+
+const getProgramIcon = (index: number) => programIcons[index] ?? Learning
 </script>
 
 <template>
@@ -34,8 +45,8 @@ const stickers: StickerPlacement[] = [
           index < 3 ? 'xl:col-span-2' : 'xl:col-span-3',
         ]"
       >
-        <span class="mb-6 grid size-12 place-items-center bg-primary text-sm font-black text-white transition duration-300 group-hover:bg-primary-hover group-focus-visible:bg-primary-hover md:mb-7">
-          {{ program.title.slice(0, 2) }}
+        <span class="mb-6 grid size-14 place-items-center bg-primary text-white transition duration-300 group-hover:bg-primary-hover group-focus-visible:bg-primary-hover md:mb-7">
+          <component :is="getProgramIcon(index)" :width="30" :height="30" stroke-width="2" aria-hidden="true" />
         </span>
         <h3 class="text-[1.25rem] font-black leading-[1.18] text-text-main md:text-[1.42rem]">
           {{ program.title }}

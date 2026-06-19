@@ -2,8 +2,7 @@ import type { Locale, SiteCopy } from '@/types/site'
 
 const images = {
   hero: '/hero-teacher-sticker.png',
-  olena:
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=560&q=80',
+  olena: '/diana-teacher.png',
   marta:
     'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=560&q=80',
   danylo:
@@ -87,8 +86,8 @@ export const siteContent = {
       title: 'Поки це тестові профілі, які пізніше можна замінити реальним контентом.',
       items: [
         {
-          name: 'Олена',
-          role: 'Англійська для дорослих та релокації',
+          name: 'Діана',
+          role: 'Англійська для дорослих та підлітків',
           text: 'Спокійні заняття для впевненого мовлення та реальних життєвих задач.',
           image: images.olena,
         },
@@ -204,8 +203,8 @@ export const siteContent = {
       title: 'Mock profiles for now, structured so real teacher content can replace them later.',
       items: [
         {
-          name: 'Olena',
-          role: 'Adults and relocation English',
+          name: 'Diana',
+          role: 'Adults and teenagers',
           text: 'Calm lessons for speaking confidence and real-life tasks.',
           image: images.olena,
         },

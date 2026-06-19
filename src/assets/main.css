@@ -172,8 +172,12 @@
   }
 
   .collage-heading {
+    font-family: var(--heading-font-family);
     font-size: clamp(2.1rem, 7vw, 2.85rem);
+    font-weight: 700;
     line-height: 0.98;
+    letter-spacing: 0;
+    text-transform: uppercase;
   }
 
   @media (min-width: 640px) {
